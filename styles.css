@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Barlow:600|Rasa:300,500')
+
+#title{
+    color: black;
+    background-color:yellow ;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    background-image: linear-gradient(rgba(158, 58, 58, 0.8), rgba(206, 136, 136, 0.7)),url(https://img.freepik.com/free-photo/horizontal-view-fresh-delicious-juice-glass-with-orange-lime-tube-dark-background_140725-140821.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Barlow', sans-serif;
+    color: white;
+}
+
+.label-title{
+    padding: 20px;
+
+
+}
+#survey-form{
+    background-color:brown;
+    padding: 20px;
+}
