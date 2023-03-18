@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 id="title">Survey</h1>
-    <p id="description">Survey test</p>
+    <p id="description">Survey about favorite beverage</p>
     <form id="survey-form">
         <div>
             <label class="label-title" id="name-label" for="name">Name</label>
@@ -35,49 +35,32 @@
               <option value="other">Other</option>
             </select>
           </div>
-          <div class="form-group">
-            <p>How often you drink your favorite beverage in a day?</p>
+          <div id="button group">
+            <label class="label-title" id="beverage-label" for="beverage">How often you drink your favorite beverage in a day?</label>
+              <input name="a-lot" value="a-lot" type="radio" class="input-radio" checked>A lot</label>
             <label>
-              <input
-                name="how-often"
-                value="a-lot"
-                type="radio"
-                class="input-radio"
-                checked
-              />A lot</label
-            >
+              <input name="many-times" value="many-times" type="radio" class="input-radio">Many times</label>
             <label>
-              <input
-                name="how-often"
-                value="many-times"
-                type="radio"
-                class="input-radio"
-              />Many times</label
-            >
-    
-            <label
-              ><input
-                name="user-recommend"
-                value="sometimes "
-                type="radio"
-                class="input-radio"
-              />Sometimes</label
-            >
+                <input name="user-recommend" value="sometimes" type="radio" class="input-radio">Sometimes</label>
+          </div>
+
+          <div id="checkbox-group">
+            <label class="label-title" id="beverage-label" for="beverage">Where do you drink it mostly?</label>  
+            <label>
+                <input name="where-drink" value="outdoor" type="checkbox" class="input-checkbox">Outdoor</label>
+            <label>
+              <input name="where-drink" value="at-home" type="checkbox" class="input-checkbox">At home</label>
+            <label>
+                <input name="where-drink" value="at-restaurant" type="checkbox" class="input-checkbox">At restaurants</label>
+            <label>
+                <input name="where-drink" value="other" type="checkbox" class="input-checkbox">Other</label>
+          </div>
+
+          <div id="text-box">
+            <p>Is there anything else you want to tell us about your favorite beverage?</p>
+            <textarea id="comments" id="input-textbox" name="comments" placeholder="Enter your comment here..."></textarea>
           </div>
     </form>
-
-     
-
-      <div class="form-group">
-        <p>What is your favorite feature of freeCodeCamp?</p>
-        <select id="most-like" name="mostLike" class="form-control" required>
-          <option disabled selected value>Select an option</option>
-          <option value="challenges">Challenges</option>
-          <option value="projects">Projects</option>
-          <option value="community">Community</option>
-          <option value="openSource">Open Source</option>
-        </select>
-      </div>
     <script>
         function ValidateEmail(mail) {
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value)) {
