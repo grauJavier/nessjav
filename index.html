@@ -8,23 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="title">Survey</h1>
-    <p id="description">Survey about favorite beverage</p>
+    <div id="header">
+      <h1 id="title">Survey</h1>
+      <p id="description">Survey about favorite beverage</p>
+    </div>
     <form id="survey-form">
-        <div>
+        <div class="question-group">
             <label class="label-title" id="name-label" for="name">Name</label>
             <input id="name" type="text" placeholder="Enter your name" required>
         </div>
-        <div>
+        <div class="question-group">
             <label class="label-title" id="email-label" for="email">Email</label>
             <input id="email" type="email" placeholder="Enter your email" required>
         </div>
-        <div>
+        <div class="question-group">
             <label class="label-title" id="number-label" for="number">Age</label>
             <input id="number" type="number" placeholder="Enter your age (optional)" min="10" max="80">
         </div>
 
-        <div>
+        <div class="question-group">
             <label class="label-title" id="beverage-label" for="beverage">What it your favorite beverage?</label>
             <select id="dropdown" name="beverage" required>
               <option disabled selected value>Select current beverage</option>
@@ -35,7 +37,7 @@
               <option value="other">Other</option>
             </select>
           </div>
-          <div id="button group">
+          <div id="button group" class="question-group">
             <label class="label-title" id="beverage-label" for="beverage">How often you drink your favorite beverage in a day?</label>
               <input name="a-lot" value="a-lot" type="radio" class="input-radio" checked>A lot</label>
             <label>
@@ -44,7 +46,7 @@
                 <input name="user-recommend" value="sometimes" type="radio" class="input-radio">Sometimes</label>
           </div>
 
-          <div id="checkbox-group">
+          <div id="checkbox-group" class="question-group">
             <label class="label-title" id="beverage-label" for="beverage">Where do you drink it mostly?</label>  
             <label>
                 <input name="where-drink" value="outdoor" type="checkbox" class="input-checkbox">Outdoor</label>
@@ -56,10 +58,13 @@
                 <input name="where-drink" value="other" type="checkbox" class="input-checkbox">Other</label>
           </div>
 
-          <div id="text-box">
+          <div id="text-box" class="question-group">
             <p>Is there anything else you want to tell us about your favorite beverage?</p>
             <textarea id="comments" id="input-textbox" name="comments" placeholder="Enter your comment here..."></textarea>
           </div>
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
     </form>
     <script>
         function ValidateEmail(mail) {
