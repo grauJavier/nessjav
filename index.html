@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">git
+<html lang="en">
     <link rel="stylesheet" href="styles.css">
 <head>
     <meta charset="UTF-8">
@@ -9,22 +9,41 @@
 </head>
 <body>
     <h1 id="title">Survey</h1>
-    <p id="description"></p>
+    <p id="description">Survey test</p>
     <form id="survey-form">
         <div>
             <label class="label-title" id="name-label" for="name">Name</label>
-            <input id="name" type="text" placeholder="Enter your name">
+            <input id="name" type="text" placeholder="Enter your name" required>
         </div>
         <div>
-            <label class="label-title" id="name-label" for="name">Email</label>
-            <input id="email" type="text" placeholder="Enter your email">
+            <label class="label-title" id="email-label" for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
         </div>
         <div>
-            <label class="label-title" id="name-label" for="name">Age</label>
-            <input id="number" type="text" placeholder="Enter your age (optional)">
+            <label class="label-title" id="number-label" for="number">Age</label>
+            <input id="number" type="number" placeholder="Enter your age (optional)" min="10" max="80">
         </div>
-        <p>test</p>
+
+        <div>
+            <label class="label-title" id="beverage-label" for="beverage">What it your favorite beverage?</label>
+            <select id="dropdown" name="beverage" required>
+              <option disabled selected value>Select current beverage</option>
+              <option value="coffee">Coffee</option>
+              <option value="tee">Tee</option>
+              <option value="soda">Coke or Soda</option>
+              <option value="water">Water</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
     </form>
-    <script src="main.js"></script>
+    <script>
+        function ValidateEmail(mail) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value)) {
+                return (true);
+            }
+            alert("You have entered an invalid email address!");
+            return (false);
+        }
+    </script>
 </body>
 </html>
